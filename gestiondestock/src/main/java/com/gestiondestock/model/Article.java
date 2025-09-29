@@ -36,7 +36,7 @@ public class Article extends AbstractEntity {
     @Column(name = "identreprise")
     private Integer idEntreprise;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "idcategory")
     private Category category;
 
